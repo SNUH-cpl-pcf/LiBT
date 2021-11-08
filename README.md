@@ -46,6 +46,10 @@
 
 To perform downstream analysis, replicates are randomly numbered from 1 to the number of samples in each group, but analysis using replicate is not supported.
 
+
+***
+
+
 > ### 2. Data preprocessing
 
 Preprocessing can be done in the second tab of the right sidebar. Users can designate the preprocessing steps by drag and drop. The order of steps is important to take note of because the process proceeds in that set order. Users can exclude it by moving it to &quot;Not to Use&quot; at the bottom. Otherwise, at least one preprocessing must be performed.
@@ -75,7 +79,11 @@ The following is a list of preprocessing options provided by LiBT.
 - Once preprocessing is completed, the user can check the quality control (QC) results in 4 types of plots using the DEP package. The bar plot shows the number of identified proteins for each sample, and can always be checked regardless of the user-selected step. However, only after the normalization step or when there are missing values, users can check the density plot that can show the result of distribution before or after imputation. Users can also check a box plot per sample that shows distributions before and after normalization as well as density plot to see missing value and bias as a result of density and cumulative fraction.
 
   ![preprocessingIMG](base/figure1.png)
+  
 
+
+
+***
 
 
 > ### 3. Differential Expression Analysis
@@ -127,6 +135,7 @@ The following is a list of preprocessing options provided by LiBT.
 ![heatmapIMG](base/figure5.png)
 
 
+***
 
 
 > ### 4. Further analysis
@@ -184,6 +193,9 @@ The following is a list of preprocessing options provided by LiBT.
   StringDB application programming interface (API) was used for PPI network analysis. The number of default input proteins is the highest value as the number of DEPs. A value higher than the number cannot be entered. If a number lower than the number of DEPs is entered, the sort is based on one selected among P.adj (default), P.value, and log2FoldChange, and the number of inputs is selected and inputted. If the user selects Protein Name, an area for text input appears, where the user enters the text separated by &quot;,&quot; as described in the example. If the Protein Name option is selected, PPI network analysis is possible even if the analysis of the previous workflow has not been performed. The resulting network can be downloaded as an image file, and network information can also be downloaded.
   
   ![ppiIMG](base/figure10.png)
+
+
+***
 
 
 > ### 5. Download options
