@@ -38,7 +38,7 @@ Input data can be filtered by selecting &quot;Only identified by site&quot;, &qu
 
 | condition | replicate |
 | --- | --- | --- |
-| A\_1 | case | 1 |
+| "A\_1" | case | 1 |
 | A\_2 | case | 2 |
 | A\_3 | case | 3 |
 | A\_4 | case | 4 |
