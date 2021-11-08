@@ -34,15 +34,15 @@
 
 2 ) Experimental design file is not required, and the sample list used in the experiment is provided to the user by referring to the &quot;Intensity&quot; column of the input data. If the user selects a case group from the list, he can select the samples to be used as a control group among the remaining samples. However, since only pairwise analysis is possible, care must be taken in selecting case and control samples. After selecting submit, the following design matrix is automatically created.
 
-   | | Condition | Replicate |
-   | --- | --- | --- |
-   | A\_2 | case | 1 |
-   | A\_2 | case | 2 |
-   | A\_3 | case | 3 |
-   | A\_4 | case | 4 |
-   | B\_1 | control | 1 |
-   | B\_2 | control | 2 |
-   | B\_3 | control | 3 |
+>>| | Condition | Replicate |
+>>| --- | --- | --- |
+>>| A\_2 | case | 1 |
+>>| A\_2 | case | 2 |
+>>| A\_3 | case | 3 |
+>>| A\_4 | case | 4 |
+>>| B\_1 | control | 1 |
+>>| B\_2 | control | 2 |
+>>| B\_3 | control | 3 |
 
 To perform downstream analysis, replicates are randomly numbered from 1 to the number of samples in each group, but analysis using replicate is not supported.
 
