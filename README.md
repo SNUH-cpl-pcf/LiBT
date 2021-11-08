@@ -35,8 +35,8 @@ Input data can be filtered by selecting &quot;Only identified by site&quot;, &qu
 
 2) Experimental design file is not required, and the sample list used in the experiment is provided to the user by referring to the &quot;Intensity&quot; column of the input data. If the user selects a case group from the list, he can select the samples to be used as a control group among the remaining samples. However, since only pairwise analysis is possible, care must be taken in selecting case and control samples. After selecting submit, the following design matrix is ​​automatically created.
 
-|
- | condition | replicate |
+
+| condition | replicate |
 | --- | --- | --- |
 | A\_1 | case | 1 |
 | A\_2 | case | 2 |
