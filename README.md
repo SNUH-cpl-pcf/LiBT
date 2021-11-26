@@ -1,6 +1,7 @@
 # Manual for LiBT
 
 > ### 1. Input Data preparation
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue">Data can be up to 100MB</span>
 
 1 ) LiBT enables isobaric label-based Tandem Mass Tags (TMT) and label-free iBAQ and LFQ data analysis, and supports .txt format files. To perform the analysis properly, the data must have the following columns. The workflow varies slightly depending on the data type. A brief description for each type is as follows.
 
