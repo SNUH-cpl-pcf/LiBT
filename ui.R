@@ -21,10 +21,11 @@ ui <- function(request) {shinyUI(
     sidebar = dashboardSidebar(
       width=300,
       sidebarMenu(
+        menuItem("Home", selected = T, icon=icon("home"),tabName = "home"),
+        menuItem("Analysis", selected = F, icon=icon("chart-pie"),tabName = "analysis"),
         menuItem("User Guide", selected = F, icon=icon("info"),tabName = "user_gide",
                  menuSubItem("Tutorial", tabName = "tutorial")),
-        menuItem("Analysis", selected = T, icon=icon("chart-pie"),tabName = "analysis"),
-        menuItem("TimeLine", selected = T, icon=icon("history"),
+        menuItem("TimeLine", selected = F, icon=icon("history"),
                  tabName = "timeline", uiOutput("timeline"))
       )
     ), # End of dashboardSidebar
@@ -40,6 +41,56 @@ ui <- function(request) {shinyUI(
                       ")),
       useShinyjs(),
       tabItems(
+        tabItem(
+          tabName = "home",
+          fluidRow(
+            tags$div(id="home_title", style="font-size:50pt; color:#3c8dbc; font-weight:bold","LiBT"),
+            tags$div(id="home_body", style="display:inline-block;",
+              tags$div(id="home_main", style="display:inline-block;  width:50%;",
+                       tags$div(style="font-size:15pt;","an All-in-One Proteomic Analyzer for Three Types of Proteomic Data: LFQ, iBAQ, and TMT"),
+                       tags$br(),
+                       tags$br(),
+                       tags$div(style="font-size:15pt; color:#3c8dbc; font-weight:bold","Summary"),
+                       tags$br(),
+                       tags$div("With the popularization of quantitative proteomics techniques, developing methods to easily and accurately
+collect and analyze data is of utmost importance. The growing volumes of mass spectroscopic data has led to
+the development of analytical tools to quantify proteins, consequently resulting in several mass spectroscopy
+(MS)-based shotgun proteomic applications. Although as powerful as it is, MS-based shotgun proteomic
+analysis requires adept programming skills and the ability to survey an exhaustive amount of data using R
+packages. To provide a more efficient and accessible solution, we developed “LiBT” (abbreviated from LFQ,
+iBAQ, and TMT), a comprehensive web-based analytics tool that allows easy navigation without substantial
+need for prior programming knowledge. Compared to the original DEP library, LiBT incorporates more data
+types, namely LFQ, iBAQ, and TMT. LiBT also does not require adding the experimental design because the
+GUI allows researchers to choose the design settings themselves. Furthermore, LiBT incorporates additional
+analyses in an all-in-one setting: GSA, GSEA, and PPI. Our model provides seamless integration of these
+three additional analyses based on DEA results. Taken together, the newly developed LiBT is a high-quality
+practical platform that enables generating ready-to-use,polished data visualizations."),
+                       tags$br(),
+                       tags$br(),
+                       tags$div(style="font-size:15pt; color:#3c8dbc; font-weight:bold","Contact Us"),
+                       tags$br(),
+                       tags$div(id="contactBox",style="display:inline-block",
+                          tags$div(id="contact1", style="display:inline-block; border:1px solid white; border-radius:15px; background:white; padding:40px 30px;",
+                                   tags$p(style="font-size:11pt","Heonyi Lee"),
+                                   tags$p(style="font-size:11pt","- email : hylee4161@gmail.com")
+                          ),
+                          tags$div(id="contact2", style="margin-left:20px; display:inline-block;border:1px solid white; border-radius:15px; background:white; padding:40px 30px;",
+                                   tags$p(style="font-size:11pt","Ji Young Ahn"),
+                                   tags$p(style="font-size:11pt","- email : jyahn0103@gmail.com")
+                                
+                          )
+                       ),
+                       tags$br(),
+                       tags$br(),
+                       tags$br(),
+                       tags$div(style="font-size:15pt; color:#3c8dbc; font-weight:bold","Report bugs or Questions"),
+                       tags$br(),
+                       tags$a(style="font-size:11pt; color:black;","https://github.com/SNUH-cpl-pcf/LiBT/",href="https://github.com/SNUH-cpl-pcf/LiBT/")
+              ),
+              imageOutput("workflow",width="30%", height="100%")         
+            )
+          )
+        ),#end of home tabItem
         tabItem(
           tabName = "analysis",
           fluidRow(
@@ -299,6 +350,9 @@ ui <- function(request) {shinyUI(
             tags$br(),
             tags$br(),
             h3("1. Input Data preparation"),tags$br(),
+            tags$i("*Data can be up to 100MB",style="margin:0 40px; color:blue;"),
+            tags$br(),
+            tags$br(),
             tags$div(id="input_data_box",
                      tags$ul(
                        tags$li(
