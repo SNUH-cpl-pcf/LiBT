@@ -27,8 +27,8 @@
 .tmt_example_file_download_btn:focus {margin-bottom:15px; background-color:#00c369; color:white;}
 .tmt_example_file_download_btn:hover {background-color:#01b563; color:black;}
 
-
-
+#workflow{display:inline-block; vertical-align:top;}
+#workflow>img{width:100%;}
 #pca_plot_box .form-group .shiny-input-container {margin-left:500px;}
 #pca_plot img{width:100%; height:auto}
 #volcano_plot img{width:100%; height:auto}
