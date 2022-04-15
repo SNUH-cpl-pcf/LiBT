@@ -1448,55 +1448,61 @@ shinyServer(function(input,output, session){
     }
   )
   
+  output$workflow <- renderImage({
+    list(src = "base/workflow.png",
+         alt = "workflow", deleteFile = TRUE
+    )
+  })
+  
   output$preprocessing4th <- renderImage({
     list(src = "base/figure1.png",
-         alt = "preprocessing4th"
+         alt = "preprocessing4th", deleteFile = F
     )
   })
   
   output$pcaplotImg <- renderImage({
     list(src = "base/figure2.png",
-         alt = "pcaplotImg"
+         alt = "pcaplotImg", deleteFile = F
     )
   })
   output$vcplotImg <- renderImage({
     list(src = "base/figure3.png",
-         alt = "vcplotImg"
+         alt = "vcplotImg", deleteFile = F
     )
   })
   output$corrplotImg <- renderImage({
     list(src = "base/figure4.png",
-         alt = "corrplotImg"
+         alt = "corrplotImg", deleteFile = F
     )
   })
   output$heatmapImg <- renderImage({
     list(src = "base/figure5.png",
-         alt = "heatmapImg"
+         alt = "heatmapImg", deleteFile = F
     )
   })
   output$barplotGSA <- renderImage({
     list(src = "base/figure6.png",
-         alt = "barplotGSA"
+         alt = "barplotGSA", deleteFile = F
     )
   })
   output$pathviewImgGSA <- renderImage({
     list(src = "base/figure7.png",
-         alt = "pathviewImgGSA"
+         alt = "pathviewImgGSA", deleteFile = F
     )
   })
   output$erplotGSEA <- renderImage({
     list(src = "base/figure8.png",
-         alt = "erplotImgGSA"
+         alt = "erplotImgGSA", deleteFile = F
     )
   })
   output$pathviewImgGSEA <- renderImage({
     list(src = "base/figure9.png",
-         alt = "pathviewImgGSEA"
+         alt = "pathviewImgGSEA", deleteFile = F
     )
   })
   output$ppiImg <- renderImage({
     list(src = "base/figure10.png",
-         alt = "ppiImg"
+         alt = "ppiImg", deleteFile = F
     )
   })
   ####################################################################################################################################
